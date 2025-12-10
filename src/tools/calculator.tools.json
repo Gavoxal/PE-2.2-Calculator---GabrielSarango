@@ -1,0 +1,17 @@
+{
+    "name": "calculator",
+    "description": "Realizar operaciones aritmeticas basicas como suma, resta, multiplicacion y división, con dos numeros",
+    "inputSchema": {
+        "type": "object",
+        "properties": {
+            "operation": { "type": "string", 
+            "enum": ["add", "subtract", "multiply", "divide"] 
+            },
+            "a": { "type": "integer", "description": "Primer numero" },
+            "b": { "type": "integer", "description": "Segundo numero" }
+        },
+        "required": ["operation", "a", "b"],
+        "additionalProperties": false 
+        }
+        
+}
