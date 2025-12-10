@@ -7,13 +7,25 @@ Para instalar las dependencias necesarias, ejecutar el siguiente comando en la t
 npm install
 ```
 
-comandos usados: 
+comandos usados:
+``` 
 npm init -y
+```
+```
 npm install fastify
+```
+```
 npm install -D typescript @types/node ts-node nodemon 
+```
+```
 npx tsc --init
+```
+```
 npm install @fastify/swagger 
+```
+```
 npm install @fastify/swagger-ui
+```
 
 ## Estructura del proyecto
 
