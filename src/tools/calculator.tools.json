@@ -1,17 +1,55 @@
 {
     "name": "calculator",
-    "description": "Realizar operaciones aritmeticas basicas como suma, resta, multiplicacion y división, con dos numeros",
+    "description": "Realizar operaciones aritméticas básicas como suma, resta, multiplicación y división con dos números. Este tool valida todas las entradas y proporciona mensajes de error claros para operaciones inválidas como división por cero.",
     "inputSchema": {
         "type": "object",
+        "title": "Calculator Input",
+        "description": "Esquema de entrada para operaciones de calculadora",
         "properties": {
-            "operation": { "type": "string", 
-            "enum": ["add", "subtract", "multiply", "divide"] 
+            "operation": { 
+                "type": "string", 
+                "enum": ["add", "subtract", "multiply", "divide"],
+                "description": "Tipo de operación aritmética a realizar",
+                "examples": ["add", "multiply"]
             },
-            "a": { "type": "integer", "description": "Primer numero" },
-            "b": { "type": "integer", "description": "Segundo numero" }
+            "a": { 
+                "type": "number", 
+                "description": "Primer número (operando izquierdo)",
+                "examples": [10, 25.5, -3]
+            },
+            "b": { 
+                "type": "number", 
+                "description": "Segundo número (operando derecho). En división, no puede ser cero.",
+                "examples": [5, 12.3, -7]
+            }
         },
         "required": ["operation", "a", "b"],
-        "additionalProperties": false 
-        }
-        
+        "additionalProperties": false,
+        "examples": [
+            {
+                "description": "Suma de dos números positivos",
+                "operation": "add",
+                "a": 10,
+                "b": 5
+            },
+            {
+                "description": "Resta con resultado negativo",
+                "operation": "subtract",
+                "a": 5,
+                "b": 10
+            },
+            {
+                "description": "Multiplicación con decimales",
+                "operation": "multiply",
+                "a": 3.5,
+                "b": 2.0
+            },
+            {
+                "description": "División con resultado decimal",
+                "operation": "divide",
+                "a": 10,
+                "b": 3
+            }
+        ]
+    }
 }
