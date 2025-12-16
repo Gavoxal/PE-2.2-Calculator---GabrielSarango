@@ -53,47 +53,21 @@ El servidor implementa las siguientes medidas de seguridad:
             `,
             version: '1.0.0',
             contact: {
-                name: 'Equipo de Desarrollo MCP Calculator',
-                email: 'support@mcpcalculator.example.com',
-                url: 'https://github.com/your-username/pe-2.2-calculator'
+                
+               
             },
             license: {
                 name: 'MIT',
-                url: 'https://opensource.org/licenses/MIT'
+                
             },
-            termsOfService: 'https://mcpcalculator.example.com/terms'
+            
         },
-        externalDocs: {
-            description: 'Documentación completa del proyecto',
-            url: 'https://github.com/your-username/pe-2.2-calculator/wiki'
-        },
+        
         servers: [
-            {
-                url: 'http://localhost:3000',
-                description: 'Servidor de desarrollo local'
-            },
-            {
-                url: 'https://api-dev.mcpcalculator.example.com',
-                description: 'Servidor de desarrollo (staging)'
-            },
-            {
-                url: 'https://api.mcpcalculator.example.com',
-                description: 'Servidor de producción'
-            }
+            
         ],
         tags: [
-            { 
-                name: 'calculator', 
-                description: 'Operaciones aritméticas básicas',
-                externalDocs: {
-                    description: 'Guía de uso del calculator',
-                    url: 'https://github.com/your-username/pe-2.2-calculator/wiki/Calculator-Guide'
-                }
-            },
-            {
-                name: 'health',
-                description: 'Endpoints de salud y monitoreo del servicio'
-            }
+            
         ],
         components: {
             securitySchemes: {
